@@ -15,7 +15,7 @@
 </script>
 
 <nav class="navbar navbar-custom navbar-expand-lg navbar-light ">
-	<a class="navbar-brand" href="AboutUs.php">
+	<a class="navbar-brand" href="index.php">
 		<img src="Icons/logo.png" width="50rem" alt="Logo">
 	</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
