@@ -2,7 +2,7 @@
 session_start();
 
 //Connect to database
-require_once "SQLConnect.php";
+require_once "phpconnect.php";
 $sql = mysqli_query($conn, "Select distinct u.username, u.gender, u.email, q.title, qt.score, qt.date From user u Inner join quiz_taken qt on u.username = qt.username Inner join quiz q on q.quiz_id = qt.quiz_id");
 ?>
 <!DOCTYPE html>
