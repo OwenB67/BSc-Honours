@@ -3,7 +3,7 @@
 session_start();
 
 //Connect to database
-require_once "SQLConnect.php";
+require_once "phpconnect.php";
 $sql = mysqli_query($conn, "Select * from cocktail");
 ?>
 <!DOCTYPE html>
