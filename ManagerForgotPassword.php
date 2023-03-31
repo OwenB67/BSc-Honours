@@ -6,7 +6,7 @@ session_start();
 if (isset($_POST['ManagerForgotPassword'])) {
 
     //Connect to database
-    require_once "SQLConnect.php";
+    require_once "phpconnect.php";
 
     //Declare email and password variables and perform functions on them to prevent SQL injection
     $Email = mysqli_real_escape_string($conn, stripslashes(strip_tags($_POST['ManagerEmail'])));
