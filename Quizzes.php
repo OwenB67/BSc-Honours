@@ -8,7 +8,8 @@ if (isset($_SESSION['ManagerEmail'])) {
   header("Location: Login.php");
 }
 
-require_once "SQLConnect.php";
+//Connect to database
+require_once "phpconnect.php";
 $sql = mysqli_query($conn, "Select * from quiz");
 $answers = array("answer1", "answer2", "answer3", "answer4");
 ?>
@@ -89,7 +90,7 @@ $answers = array("answer1", "answer2", "answer3", "answer4");
                 <div class="modal-dialog modal-xl">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="#<?php echo $row['quiz_id'] . "ModalLabel" ?> Description">Description</h5>
+                      <h5 class="modal-title" id="#<?php echo $row['quiz_id'] . "ModalLabel" ?> Description"><?php echo $row['title']?></h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
