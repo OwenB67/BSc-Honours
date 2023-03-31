@@ -11,7 +11,7 @@ if (isset($_SESSION['Email']) || isset($_SESSION['ManagerEmail'])) {
 if (isset($_POST['Login'])) {
 
     //Connect to database
-    require_once "SQLConnect.php";
+    require_once "phpconnect.php";
 
     //Declares email and password variables and performs functions on them to prevent SQL injection
     $Email = mysqli_real_escape_string($conn, stripslashes(strip_tags($_POST['Email'])));
