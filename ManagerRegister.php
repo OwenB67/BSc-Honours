@@ -6,7 +6,7 @@ session_start();
 if (isset($_POST['Register'])) {
 
     //Connect to database
-    require_once "SQLConnect.php";
+    require_once "phpconnect.php";
 
     //Declare all variables & prevent sql injection
     $email = mysqli_real_escape_string($conn, stripslashes(strip_tags($_POST['ManagerEmail'])));
