@@ -9,7 +9,7 @@ if (isset($_SESSION['Email']) || isset($_SESSION['ManagerEmail'])) {
 if (isset($_POST['Register'])) {
 
     //Connect to database
-    require_once "SQLConnect.php";
+    require_once "phpconnect.php";
 
     //Declare all variables & prevent sql injection
     $username = mysqli_real_escape_string($conn, stripslashes(strip_tags($_POST['Username'])));
