@@ -8,7 +8,7 @@ if (isset($_SESSION['ManagerEmail'])) {
 	  header("Location: Login.php");
 }
 //Connect to database
-require_once "SQLConnect.php";
+require_once "phpconnect.php";
 $sql = mysqli_query($conn, "Select * from venues");
 ?>
 <!DOCTYPE html>
