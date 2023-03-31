@@ -5,7 +5,7 @@ session_start();
 if (isset($_SESSION['Email']) &&!empty($_SESSION['Email'])) {
     $sessionemail = $_SESSION['Email'];
     //Connect to database
-    $conn = mysqli_connect("localhost", "root", "", 'bared');
+    require_once "phpconnect.php";
     $sql = mysqli_fetch_array(mysqli_query($conn, "Select security_question, security_answer from user where email = '$sessionemail'"));
     $secQuestion = $sql[0];
     $answer = $sql[1];
